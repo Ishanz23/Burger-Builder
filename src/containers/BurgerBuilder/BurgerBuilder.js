@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from "react";
-import Burger from "../../components/Burger/Burger";
+import React, { Component, Fragment } from 'react';
+import Burger from '../../components/Burger/Burger';
 
 class BurgerBuilder extends Component {
   /* eslint-disable no-alert */
@@ -8,8 +8,8 @@ class BurgerBuilder extends Component {
       salad: 0,
       bacon: 0,
       cheese: 0,
-      meat: 0
-    }
+      meat: 0,
+    },
   };
   /* eslint-disable no-alert */
   render() {

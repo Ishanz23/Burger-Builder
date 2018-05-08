@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
-const burger = (props) => {
+const burger = props => {
+  /* eslint-disable */
   let transformedIngredients = Object.keys(props.ingredients)
-    .map(ingredientKey => [...Array(props.ingredients[ingredientKey])].map((_, i) =>
-      <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />))
+    .map(ingredientKey =>
+      [...Array(props.ingredients[ingredientKey])].map((_, i) => (
+        <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />
+      ))
+    )
     .reduce((arr, el) => arr.concat(el), []);
+  /* eslint-disable */
   if (transformedIngredients.length < 1) {
     transformedIngredients = <p>Please add some Ingredients!</p>;
   }
@@ -21,7 +26,7 @@ const burger = (props) => {
 };
 
 burger.propTypes = {
-  type: PropTypes.object
+  type: PropTypes.object,
 };
 
 export default burger;
