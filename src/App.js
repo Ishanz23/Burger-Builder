@@ -3,11 +3,9 @@ import Layout from './components/layout/layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 const App = () => (
-  <div>
-    <Layout>
-      <BurgerBuilder />
-    </Layout>
-  </div>
+  <Layout>
+    <BurgerBuilder />
+  </Layout>
 );
 
 export default App;

@@ -6,7 +6,7 @@ import Backdrop from '../Backdrop/Backdrop';
 
 const modal = props => (
   <Fragment>
-    <Backdrop show={props.show} />
+    <Backdrop show={props.show} clicked={props.purchaseCanceled} />
     <div
       className={classes.Modal}
       style={{
